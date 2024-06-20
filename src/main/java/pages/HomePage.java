@@ -44,9 +44,6 @@ public class HomePage {
   @FindBy (xpath = "//button[@name = 'checkout']")
   WebElement checkoutButton;
 
-  @FindBy (xpath = "//input[@name = 'continue']")
-  WebElement sendAddressButton;
-
   @FindBy (xpath = "//input[@name = 'firstName']")
   WebElement firstName;
 
@@ -55,6 +52,12 @@ public class HomePage {
 
   @FindBy (xpath = "//input[@name = 'postalCode']")
   WebElement zipCode;
+
+  @FindBy (xpath = "//input[@name = 'continue']")
+  WebElement sendAddressButton;
+
+  @FindBy (xpath = "//button[@name = 'finish']")
+  WebElement finishButton;
 
   public HomePage(WebDriver driver) {
     this.driver = driver;
@@ -132,5 +135,10 @@ public class HomePage {
   public void sendAddress(){
     wait.until(ExpectedConditions.elementToBeClickable(sendAddressButton));
     sendAddressButton.click();
+  }
+
+  public void finishClick(){
+    wait.until(ExpectedConditions.elementToBeClickable(finishButton));
+    finishButton.click();
   }
 }
