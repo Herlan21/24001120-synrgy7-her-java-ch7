@@ -57,9 +57,12 @@ public class HomePageTest {
         homePage.inputLastName("Nurachman");
         homePage.inputZipCode("12345");
         homePage.sendAddress();
+        homePage.finishClick();
 
         //Assertion 1 Get Current Url
         assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
+
+        //Assertion 2
     }
 
     @AfterClass
