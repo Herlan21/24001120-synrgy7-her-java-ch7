@@ -52,15 +52,23 @@ public class HomePageTest {
         homePage.addProductToCart("sauce labs onesie");
         homePage.addProductToCart("sauce labs bike light");
         homePage.cartButton();
+        //Assertion get current URL in Cart page
+        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         homePage.clickCheckoutButton();
+
+        //Assertion check if form is displayed
+        homePage.checkoutinfo();
+
         homePage.inputUsername("Herlan");
         homePage.inputLastName("Nurachman");
         homePage.inputZipCode("12345");
+        // Assertion get current URL in Overview product page
+        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-one.html");
+
         homePage.sendAddress();
         homePage.finishClick();
-
-        //Assertion 1 Get Current Url
-        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
+        //Assertion Get Current Url 1
+        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
 
         //Assertion 2
     }
