@@ -44,6 +44,9 @@ public class HomePage {
   @FindBy (xpath = "//button[@name = 'checkout']")
   WebElement checkoutButton;
 
+  @FindBy (xpath = "//div[@class = 'checkout_info']")
+  WebElement checkoutAssertion;
+
   @FindBy (xpath = "//input[@name = 'firstName']")
   WebElement firstName;
 
@@ -81,6 +84,10 @@ public class HomePage {
   public void getExpensive(){
     wait.until(ExpectedConditions.visibilityOf(expensiveProduct));
     expensiveProduct.isDisplayed();
+  }
+
+  public void checkoutinfo(){
+    checkoutAssertion.isDisplayed();
   }
 
   public void getCheap(){
