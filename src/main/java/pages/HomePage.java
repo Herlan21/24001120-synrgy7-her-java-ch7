@@ -62,6 +62,9 @@ public class HomePage {
   @FindBy (xpath = "//button[@name = 'finish']")
   WebElement finishButton;
 
+  @FindBy(xpath= "//span[@data-test = 'title' and text()='Checkout: Complete!' ]")
+  WebElement checkoutCompleteInfo;
+
   public HomePage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -93,6 +96,11 @@ public class HomePage {
   public void getCheap(){
     wait.until(ExpectedConditions.visibilityOf(cheapProduct));
     cheapProduct.isDisplayed();
+  }
+
+  public String getCheckoutComplete(){
+    wait.until(ExpectedConditions.visibilityOf(checkoutCompleteInfo));
+    return checkoutCompleteInfo.getText();
   }
 
   //method untuk action sorting

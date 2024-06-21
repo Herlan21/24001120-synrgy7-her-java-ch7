@@ -70,7 +70,8 @@ public class HomePageTest {
         //Assertion Get Current Url 1
         assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
 
-        //Assertion 2
+        //Assertion checkout info complete
+        assertEquals(homePage.getCheckoutComplete(), "Checkout: Complete!");
     }
 
     @AfterClass
