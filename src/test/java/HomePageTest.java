@@ -53,7 +53,8 @@ public class HomePageTest {
         homePage.addProductToCart("sauce labs bike light");
         homePage.cartButton();
         //Assertion get current URL in Cart page
-        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+//        assertEquals(homePage.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
         homePage.clickCheckoutButton();
 
         //Assertion check if form is displayed

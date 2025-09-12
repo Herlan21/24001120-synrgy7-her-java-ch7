@@ -84,6 +84,8 @@ public class LoginTest {
 
         //Assertion 2 - validate error message
         assertEquals(loginPage.getErrorMessage(), "Epic sadface: Username is required");
+
+//        assertEquals(loginPage.getErrorMessage(), "Epic sadface: Username is required");
     }
 
     @AfterClass

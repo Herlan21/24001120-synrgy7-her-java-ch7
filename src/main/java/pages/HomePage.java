@@ -17,7 +17,8 @@ public class HomePage {
 
 // Menetapkan locator untuk home page title dan juga product list
 
-  @FindBy(xpath = "//div[@class='app_logo' and text()='Swag Labs']")
+//  @FindBy(xpath = "//div[@class='app_logo' and text()='Swag Labs']")
+  @FindBy(xpath = "//div[text()='Swag Labs']")
   WebElement homePageTitle;
 
   @FindBy(xpath = "//div[@class='inventory_container']")
